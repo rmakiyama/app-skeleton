@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Base.Theme.Skeleton" parent="Theme.Material3.Light.NoActionBar" />
+    <style name="Base.Theme.Skeleton" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
 
     <style name="Theme.Skeleton" parent="Base.Theme.Skeleton">
         <item name="android:statusBarColor">@android:color/transparent</item>
