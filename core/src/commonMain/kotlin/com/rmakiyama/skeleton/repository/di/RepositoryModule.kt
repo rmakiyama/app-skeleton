@@ -5,7 +5,7 @@ import com.rmakiyama.skeleton.repository.DefaultItemRepository
 import com.rmakiyama.skeleton.repository.ItemRepository
 
 class RepositoryModule(
-    private val dataSourceModule: DataSourceModule,
+    private val dataSourceModule: DataSourceModule = DataSourceModule(),
 ) {
 
     fun provideItemRepository(): ItemRepository {

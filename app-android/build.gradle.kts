@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
+    id("com.google.dagger.hilt.android")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -34,6 +36,12 @@ android {
 dependencies {
     implementation(project(":core"))
 
+    implementation(libs.kotlin.coroutines.core)
+
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.androidx.lifecycle.viewModelCompose)
+
     implementation(libs.android.material)
 
     implementation(platform(libs.compose.bom))
@@ -44,4 +52,8 @@ dependencies {
     implementation(libs.compose.material3)
 
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.compiler)
 }
