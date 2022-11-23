@@ -1,4 +1,4 @@
-package com.rmakiyama.skeleton.theme
+package com.rmakiyama.skeleton.designsystem.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
