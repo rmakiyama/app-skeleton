@@ -34,6 +34,8 @@ android {
 dependencies {
     implementation(project(":core"))
 
+    implementation(libs.android.material)
+
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling)
