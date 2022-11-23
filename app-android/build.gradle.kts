@@ -34,12 +34,14 @@ android {
 dependencies {
     implementation(project(":core"))
 
+    implementation(libs.android.material)
+
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling)
     implementation(libs.compose.ui.tooling.previwe)
     implementation(libs.compose.foundation)
-    implementation(libs.compose.material)
+    implementation(libs.compose.material3)
 
     implementation(libs.androidx.activity.compose)
 }
