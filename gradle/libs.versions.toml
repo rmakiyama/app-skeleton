@@ -1,5 +1,6 @@
 [versions]
 kotlin = "1.7.20"
+coroutines = "1.6.4"
 
 # Android
 android-gradle-plugin = "8.0.0-alpha08"
@@ -11,6 +12,9 @@ minSdk = "24"
 targetSdk = "33"
 
 [libraries]
+# Multiplatform
+kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
 # Android
 compose-bom = "androidx.compose:compose-bom:2022.11.00"
 compose-ui = { module = "androidx.compose.ui:ui" }
