@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.rmakiyama.skeleton.android"
-    compileSdk = 33
+    namespace = "com.rmakiyama.skeleton"
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
-        applicationId = "com.rmakiyama.skeleton.android"
-        minSdk = 24
-        targetSdk = 33
+        applicationId = "com.rmakiyama.skeleton"
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
     }
@@ -17,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
     packagingOptions {
         resources {
@@ -33,10 +33,13 @@ android {
 
 dependencies {
     implementation(project(":core"))
-    implementation("androidx.compose.ui:ui:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
-    implementation("androidx.compose.foundation:foundation:1.2.1")
-    implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.activity:activity-compose:1.5.1")
+
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.tooling)
+    implementation(libs.compose.ui.tooling.previwe)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.material)
+
+    implementation(libs.androidx.activity.compose)
 }
