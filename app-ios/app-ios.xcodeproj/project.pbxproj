@@ -10,6 +10,9 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		4554D001292FA6CC008265F2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554D000292FA6CC008265F2 /* HomeViewModel.swift */; };
+		4554D005292FA792008265F2 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554D004292FA792008265F2 /* CoreModule.swift */; };
+		4554D007292FABC8008265F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554D006292FABC8008265F2 /* HomeView.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		4554D000292FA6CC008265F2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4554D004292FA792008265F2 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
+		4554D006292FABC8008265F2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +60,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4554CFFE292FA69E008265F2 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				4554CFFF292FA6BD008265F2 /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		4554CFFF292FA6BD008265F2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4554D000292FA6CC008265F2 /* HomeViewModel.swift */,
+				4554D006292FABC8008265F2 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4554D002292FA77D008265F2 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				4554D004292FA792008265F2 /* CoreModule.swift */,
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +105,8 @@
 		7555FF7D242A565900829871 /* app-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4554D002292FA77D008265F2 /* Di */,
+				4554CFFE292FA69E008265F2 /* Feature */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -183,6 +216,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				4554D001292FA6CC008265F2 /* HomeViewModel.swift in Sources */,
+				4554D005292FA792008265F2 /* CoreModule.swift in Sources */,
+				4554D007292FABC8008265F2 /* HomeView.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

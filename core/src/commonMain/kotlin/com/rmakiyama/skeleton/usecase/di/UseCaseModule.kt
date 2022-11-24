@@ -13,4 +13,9 @@ class UseCaseModule(
             itemRepository = repositoryModule.provideItemRepository(),
         )
     }
+
+    companion object {
+        // for Swift
+        fun get() = UseCaseModule()
+    }
 }
