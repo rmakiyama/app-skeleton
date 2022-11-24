@@ -2,9 +2,16 @@ import SwiftUI
 
 @main
 struct iOSApp: App {
+    
+    private let module: CoreModule = CoreModule.shared
+    
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+            HomeView(
+                viewModel: HomeViewModel(
+                    getItemList: module.provideGetItemList()
+                )
+            )
 		}
 	}
 }
