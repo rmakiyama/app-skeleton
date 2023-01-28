@@ -21,14 +21,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.rmakiyama.skeleton.R
 import com.rmakiyama.skeleton.designsystem.component.SkeletonTopAppBar
 import com.rmakiyama.skeleton.designsystem.theme.SkeletonTheme
 import com.rmakiyama.skeleton.model.Item
 
-@OptIn(ExperimentalLifecycleComposeApi::class)
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
