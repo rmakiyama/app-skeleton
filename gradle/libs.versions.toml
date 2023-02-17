@@ -6,7 +6,7 @@ coroutines = "1.6.4"
 androix-lifecycle = "2.6.0-beta01"
 android-gradle-plugin = "8.0.0-alpha09"
 compose-compiler = "1.4.0"
-dagger = "2.44.2"
+dagger = "2.45"
 androidx-hilt = "1.0.0"
 
 # Android configs
