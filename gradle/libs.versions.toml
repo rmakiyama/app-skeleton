@@ -3,7 +3,7 @@ kotlin = "1.8.0"
 coroutines = "1.6.4"
 
 # Android
-androix-lifecycle = "2.6.0-rc01"
+androix-lifecycle = "2.6.0"
 android-gradle-plugin = "8.0.0-alpha09"
 compose-compiler = "1.4.0"
 dagger = "2.45"
