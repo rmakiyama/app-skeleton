@@ -3,7 +3,7 @@ kotlin = "1.8.0"
 coroutines = "1.6.4"
 
 # Android
-androix-lifecycle = "2.6.0"
+androix-lifecycle = "2.6.1"
 android-gradle-plugin = "8.1.0-alpha10"
 compose-compiler = "1.4.0"
 dagger = "2.45"
@@ -19,17 +19,17 @@ targetSdk = "33"
 kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 
 # Android
-compose-bom = "androidx.compose:compose-bom:2023.01.00"
+compose-bom = "androidx.compose:compose-bom:2023.03.00"
 compose-ui = { module = "androidx.compose.ui:ui" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose-ui-tooling-previwe = { module = "androidx.compose.ui:ui-tooling-preview" }
 compose-foundation = { module = "androidx.compose.foundation:foundation" }
-compose-material3 = { module = "androidx.compose.material3:material3", version = "1.1.0-alpha08" }
+compose-material3 = { module = "androidx.compose.material3:material3", version = "1.1.0-beta01" }
 
 androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androix-lifecycle" }
 androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androix-lifecycle" }
 androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androix-lifecycle" }
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.6.1" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.7.0" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "androidx-hilt" }
 android-material = { module = "com.google.android.material:material", version = "1.8.0" }
 
