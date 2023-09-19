@@ -4,7 +4,7 @@ coroutines = "1.6.4"
 
 # Android
 androix-lifecycle = "2.6.1"
-android-gradle-plugin = "8.1.0"
+android-gradle-plugin = "8.1.1"
 compose-compiler = "1.4.0"
 dagger = "2.47"
 androidx-hilt = "1.0.0"
