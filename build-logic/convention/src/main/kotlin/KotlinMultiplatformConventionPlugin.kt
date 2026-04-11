@@ -15,6 +15,10 @@ class KotlinMultiplatformConventionPlugin : Plugin<Project> {
             pluginManager.apply("org.jetbrains.kotlin.multiplatform")
 
             extensions.configure<KotlinMultiplatformExtension> {
+                compilerOptions {
+                    freeCompilerArgs.add("-Xexpect-actual-classes")
+                }
+
                 targets.withType<KotlinMultiplatformAndroidLibraryTarget>().configureEach {
                     namespace = getDefaultNamespace(project)
                     compileSdk = libs.findVersion("android-compileSdk").get().toString().toInt()

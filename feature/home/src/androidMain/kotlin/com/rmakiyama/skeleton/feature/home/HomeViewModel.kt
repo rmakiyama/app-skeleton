@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 @ContributesIntoMap(AppScope::class)
-@ViewModelKey(HomeViewModel::class)
+@ViewModelKey
 @Inject
 class HomeViewModel(
     private val getItemsStreamUseCase: GetItemsStreamUseCase,

@@ -9,9 +9,9 @@ kotlin {
         commonMain.dependencies {
         }
         androidMain.dependencies {
-            implementation(compose.ui)
-            implementation(compose.material3)
-            implementation(compose.foundation)
+            implementation(libs.compose.ui)
+            implementation(libs.compose.material3)
+            implementation(libs.compose.foundation)
         }
     }
 }

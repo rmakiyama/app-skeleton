@@ -3,9 +3,7 @@ import com.rmakiyama.skeleton.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
-import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.withType
-import org.jetbrains.compose.ComposeExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 class FeatureConventionPlugin : Plugin<Project> {
@@ -22,8 +20,6 @@ class FeatureConventionPlugin : Plugin<Project> {
                     androidResources { enable = true }
                 }
 
-                val compose = project.extensions.getByType<ComposeExtension>()
-
                 sourceSets.apply {
                     commonMain.dependencies {
                         implementation(project(":core:ui"))
@@ -35,11 +31,11 @@ class FeatureConventionPlugin : Plugin<Project> {
                         implementation(libs.findLibrary("metro-runtime").get())
                     }
                     androidMain.dependencies {
-                        implementation(compose.dependencies.ui)
-                        implementation(compose.dependencies.material3)
-                        implementation(compose.dependencies.materialIconsExtended)
-                        implementation(compose.dependencies.foundation)
-                        implementation(compose.dependencies.components.resources)
+                        implementation(libs.findLibrary("compose-ui").get())
+                        implementation(libs.findLibrary("compose-material3").get())
+                        implementation(libs.findLibrary("compose-materialIconsExtended").get())
+                        implementation(libs.findLibrary("compose-foundation").get())
+                        implementation(libs.findLibrary("compose-components-resources").get())
 
                         implementation(libs.findLibrary("androidx-navigation3-runtime").get())
 
