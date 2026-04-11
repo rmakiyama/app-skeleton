@@ -30,11 +30,7 @@ gradlePlugin {
             id = "skeleton.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
-        register("androidLibrary") {
-            id = "skeleton.android.library"
-            implementationClass = "AndroidLibraryConventionPlugin"
-        }
-        register("kotlinMultiplatform") {
+register("kotlinMultiplatform") {
             id = "skeleton.kotlin.multiplatform"
             implementationClass = "KotlinMultiplatformConventionPlugin"
         }

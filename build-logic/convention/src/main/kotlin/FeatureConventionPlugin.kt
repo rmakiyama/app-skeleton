@@ -9,7 +9,6 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 class FeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply("skeleton.android.library")
             pluginManager.apply("skeleton.kotlin.multiplatform")
             pluginManager.apply("skeleton.kotlin.multiplatform.ios")
             pluginManager.apply("skeleton.compose.multiplatform")

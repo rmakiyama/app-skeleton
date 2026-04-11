@@ -1,5 +1,4 @@
 plugins {
-    id("skeleton.android.library")
     id("skeleton.kotlin.multiplatform")
     id("skeleton.kotlin.multiplatform.ios")
 }
