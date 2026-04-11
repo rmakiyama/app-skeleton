@@ -1,0 +1,15 @@
+CREATE TABLE item (
+    id TEXT NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    description TEXT,
+    created_at INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM item ORDER BY created_at DESC;
+
+insert:
+INSERT INTO item (id, title, description, created_at) VALUES (?, ?, ?, ?);
+
+delete:
+DELETE FROM item WHERE id = ?;

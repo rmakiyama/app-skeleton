@@ -1,66 +1,53 @@
 plugins {
-    id("com.android.application")
-    id("com.google.dagger.hilt.android")
-    kotlin("android")
-    kotlin("kapt")
+    id("skeleton.android.application")
+    id("skeleton.kotlin.multiplatform")
+    id("skeleton.compose.multiplatform")
+    id("skeleton.metro")
+    alias(libs.plugins.kotlinSerialization)
 }
 
 android {
-    namespace = "com.rmakiyama.skeleton"
-    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         applicationId = "com.rmakiyama.skeleton"
-        minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
-    }
-    packagingOptions {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+}
+
+kotlin {
+    sourceSets {
+        androidMain.dependencies {
+            implementation(compose.preview)
+            implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.navigation3.runtime)
+            implementation(libs.androidx.navigation3.ui)
+            implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+            implementation(libs.androidx.material3.adaptive.navigation3)
         }
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
+        commonMain.dependencies {
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
+            implementation(libs.androidx.lifecycle.viewmodelCompose)
+            implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation(libs.kotlinx.serialization.json)
+            implementation(libs.metro.runtime)
+            implementation(libs.metro.runtime.compose)
+            implementation(libs.metro.android)
+            implementation(projects.shared)
+            implementation(projects.core.ui)
+            implementation(projects.core.navigation)
+            implementation(projects.feature.home)
+            implementation(projects.domain)
+            implementation(projects.data)
+            implementation(projects.usecase)
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
 dependencies {
-    implementation(project(":core"))
-
-    implementation(libs.kotlin.coroutines.core)
-
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.runtimeCompose)
-    implementation(libs.androidx.lifecycle.viewModelCompose)
-
-    implementation(libs.android.material)
-
-    implementation(platform(libs.compose.bom))
-    implementation(libs.compose.ui)
-    implementation(libs.compose.ui.tooling)
-    implementation(libs.compose.ui.tooling.previwe)
-    implementation(libs.compose.foundation)
-    implementation(libs.compose.material3)
-
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.hilt.navigation.compose)
-
-    implementation(libs.dagger.hilt.android)
-    kapt(libs.dagger.hilt.compiler)
+    debugImplementation(compose.uiTooling)
 }
