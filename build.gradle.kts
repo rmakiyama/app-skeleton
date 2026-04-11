@@ -1,12 +1,10 @@
 plugins {
-    //trick: for the same plugin versions in all sub-modules
-    alias(libs.plugins.android.application).apply(false)
-    alias(libs.plugins.android.library).apply(false)
-    kotlin("android").version(libs.versions.kotlin).apply(false)
-    kotlin("multiplatform").version(libs.versions.kotlin).apply(false)
-    alias(libs.plugins.dagger.hilt.android).apply(false)
-}
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    alias(libs.plugins.androidApplication) apply false
+    alias(libs.plugins.androidLibrary) apply false
+    alias(libs.plugins.composeMultiplatform) apply false
+    alias(libs.plugins.composeCompiler) apply false
+    alias(libs.plugins.kotlinMultiplatform) apply false
+    alias(libs.plugins.metro) apply false
+    alias(libs.plugins.mokkery) apply false
+    alias(libs.plugins.sqldelight) apply false
 }
