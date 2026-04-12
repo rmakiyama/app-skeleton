@@ -2,6 +2,17 @@
 
 A template repository for mobile apps built with Kotlin Multiplatform.
 
+## Setup
+
+1. Use this template to create a new repository
+2. Clone the new repository
+3. Run the setup script:
+   ```bash
+   ./setup.sh --app-name "YourApp" --package "com.example.yourapp"
+   ```
+4. Open in Android Studio and sync Gradle
+5. Run `app-android` configuration
+
 ## Architecture
 
 Clean Architecture with a multi-module structure.
@@ -59,10 +70,3 @@ graph TD
 - Development
     - Convention Plugins (`build-logic/`)
     - Gradle Version Catalog
-
-## Setup
-
-1. Clone this repository
-2. Open in Android Studio
-3. Sync Gradle
-4. Run `app-android` configuration
