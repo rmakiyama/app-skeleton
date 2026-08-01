@@ -1,6 +1,10 @@
 # App Skeleton
 
-A template repository for mobile apps built with Kotlin Multiplatform.
+A template repository for mobile apps built with Kotlin Multiplatform. The UI is native on each
+platform: Jetpack Compose on Android, SwiftUI on iOS.
+
+For a variant that shares the UI across both platforms with Compose Multiplatform, see
+[app-skeleton-cmp](https://github.com/rmakiyama/app-skeleton-cmp).
 
 ## Setup
 
